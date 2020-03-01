@@ -1,5 +1,4 @@
 FROM openjdk:8-jdk
-RUN mkdir /data
 VOLUME /data
 WORKDIR /data
 ADD https://ci.nukkitx.com/job/Geyser/job/master/lastSuccessfulBuild/artifact/target/Geyser.jar /data
