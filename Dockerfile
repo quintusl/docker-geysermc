@@ -1,7 +1,6 @@
-FROM openjdk:8-jdk
+FROM openjdk:16-jdk
 VOLUME /data
 WORKDIR /data
-ADD https://ci.nukkitx.com/job/Geyser/job/master/lastSuccessfulBuild/artifact/target/Geyser.jar /data
+ADD https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/build/libs/Geyser-Standalone.jar /data
 EXPOSE 19132
-CMD ["java", "-Xms1024m", "-Xmx1024m", "-jar", "Geyser.jar"]
-
+CMD ["java", "-Xms1024m", "-Xmx1024m", "-jar", "Geyser-Standalone.jar"]
